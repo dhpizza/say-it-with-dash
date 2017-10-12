@@ -1,0 +1,53 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900);
+
+body {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(http://moziru.com/images/lightening-clipart-flash-logo-11.jpg);
+  background-size: cover;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+h1 {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 3rem;
+  white-space: nowrap;
+  color: white;
+
+}
+p {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+main {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+/*
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+  background: ;
+
+  background-size: cover;
+}
+
+a {
+  color: #00B7FF;
+}
+*/
