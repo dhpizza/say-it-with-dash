@@ -4,13 +4,13 @@ const bodyParser= require('body-parser')
 const app = express()
 
 app.use(bodyParser.urlencoded({extended: true}))
-
+app.use( express.static( "public" ));
 app.set('view engine', 'ejs')
 
 //database stuff
 const MongoClient = require('mongodb').MongoClient
 var db
-MongoClient.connect('mongodb://dash:dashdb@ds117965.mlab.com:17965/dash-gordon-quotes', (err, database) => {
+MongoClient.connect('mongodb://root:root@ds117965.mlab.com:17965/dash-gordon-quotes', (err, database) => {
   if (err) return console.log(err)
     db = database
     app.listen(50050, () => {
@@ -31,7 +31,7 @@ app.get('/quotes', (req, res) => {
   db.collection('quotes').find().toArray((err, result) => {
     if (err) return console.log(err)
     // renders index.ejs
-    res.render('index.ejs', {quotes: result})
+    res.render('quotes.ejs', {quotes: result});
   })
 })
 
