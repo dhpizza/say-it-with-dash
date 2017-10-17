@@ -6,14 +6,16 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
 </head>
 <body>
-  <h1>What Dash said so far</h1>
-  <ul class="quotes">
+  <p>Dash Gordon says:</p>
+  <h1>
+  <!--<ol class="quotes">-->
   <% for(var i=0; i<quotes.length; i++) {%>
-    <li class="quote">
+    <!--<li class="quote">-->
       <span><%= quotes[i].name %></span>
       <span><%= quotes[i].quote %></span>
-    </li>
+    <!--</li>-->
   <% } %>
-  </ul>
+  <!--</ol>-->
+</h1>
 </body>
 </html>

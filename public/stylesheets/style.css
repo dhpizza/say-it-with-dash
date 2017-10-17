@@ -25,12 +25,14 @@ h1 {
   font-size: 3rem;
   white-space: nowrap;
   color: white;
+  text-align: center
 
 }
 p {
   margin: 0;
   font-size: 1.5rem;
   color: white;
+  text-align: center
 }
 
 main {
