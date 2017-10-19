@@ -27,7 +27,9 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 //pure MongoDB
 const MongoClient = require('mongodb').MongoClient
 var db
-MongoClient.connect('mongodb://root:root@ds117965.mlab.com:17965/dash-gordon-quotes', (err, database) => {
+//var dbname = 'mongodb://root:root@ds117965.mlab.com:17965/dash-gordon-quotes'
+var dbname = 'mongodb://localhost:27017/dash-gordon-quotes'
+MongoClient.connect(dbname, (err, database) => {
   if (err) return console.log(err)
     db = database
     app.listen(50050, () => {
@@ -44,6 +46,7 @@ app.get('/', (req, res) => {
   db.collection('quotes').find().toArray(function(err, results) {
   console.log(results)})
 })
+
 
 app.get('/quotes', (req, res) => {
   db.collection('quotes').find().toArray((err, result) => {
